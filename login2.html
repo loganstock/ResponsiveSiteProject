@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Signatures Sports Memorbilia Collection Group - Sign Up</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+<meta name="author" content="Logan Stock">
+<script>
+    function showQ2() {
+      document.getElementById('firstQuestion').style.display = 'none';
+      document.getElementById('secondQuestion').style.display = 'block';
+    }
+    function showQ3() {
+      document.getElementById('secondQuestion').style.display = 'none';
+      document.getElementById('thirdQuestion').style.display = 'block';
+    }
+    function showQ4() {
+      document.getElementById('thirdQuestion').style.display = 'none';
+      document.getElementById('forthQuestion').style.display = 'block';
+    }
+    function showQ5() {
+      document.getElementById('forthQuestion').style.display = 'none';
+      document.getElementById('fifthQuestion').style.display = 'block';
+    }
+</script>
+</head>
+
+<body>
+  <div class="header">
+    <ul class="navigation">
+        <li><a href="events.html">Events</a></li>
+        <li><a href="store.html">Store</a></li>
+        <li><a href="feature.html">feature</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="news.html">Newsletter</a></li>
+        <li><a href="index.html">Home</a></li>
+    </ul>
+  </div>
+  <div class="body">
+    <form action="welcome.html">
+        <h1>Become a Signatures Member</h1>
+        <div id="firstQuestion">
+            <label>What sports / activities do enjoy watching?</label><br>
+            <textarea rows="4" cols="40" required="required"></textarea><br>
+            <button type="button" onclick="showQ2()">Next</button>
+        </div>
+        <div id="secondQuestion" >
+            <label>Do you own a collection of memorabilia? <br> If so, what do you collect?</label><br>
+            <textarea rows="4" cols="40" required="required"></textarea><br>
+            <button type="button" onclick="showQ3()">Next</button>
+        </div>
+        <div id="thirdQuestion">
+            <label>How did you learn about Signatures?</label><br>
+            <textarea rows="4" cols="40" required="required"></textarea><br>
+            <button type="button" onclick="showQ4()">Next</button>
+        </div>
+        <div id="forthQuestion">
+            <label>Do you wish to start or improve your collection?</label><br>
+            <textarea rows="4" cols="40" required="required"></textarea><br>
+            <button type="button" onclick="showQ5()">Next</button>
+        </div>
+        <div id="fifthQuestion">
+            <label>Would you be interested in attending Signatures' monthly meetups?</label><br>
+            <textarea rows="4" cols="40" required="required"></textarea><br>
+            <button type="submit" class="submit">Submit</button>
+        </div>
+    </form>
+  </div>
+  <div class="footer">
+
+  </div>
+</body>
+</html>

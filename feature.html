@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Signatures Sports Memorbilia Collection Group - History</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+<link href="lightbox.css" rel="stylesheet" type="text/css">
+<meta name="author" content="Logan Stock">
+</head>
+
+<body>
+  <div class="header">
+    <ul class="navigation">
+        <li><a href="events.html">Events</a></li>
+        <li><a href="store.html">Store</a></li>
+        <li><a href="feature.html">Feature</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="news.html">Newsletter</a></li>
+        <li><a href="index.html">Home</a></li>
+    </ul>
+  </div>
+  <div class="body">
+    <h1>Feature Items</h1>
+      <div class="row">
+          <div class="column">
+            <img src="images/cards1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow" width="100%">
+          </div>
+          <div class="column">
+            <img src="images/stage.png" onclick="openModal();currentSlide(2)" class="hover-shadow" width="100%">
+          </div>
+          <div class="column">
+            <img src="images/cards2.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow" width="100%">
+          </div>
+          <div class="column">
+            <img src="images/detroitCollection.png" onclick="openModal();currentSlide(4)" class="hover-shadow" width="100%">
+          </div>
+          <div class="column">
+            <img src="images/cards3.jpg" onclick="openModal();currentSlide(5)" class="hover-shadow" width="100%">
+          </div>
+        </div>
+        
+        <!-- The Modal/Lightbox -->
+        <div id="myModal" class="modal">
+          <span class="close cursor" onclick="closeModal()">&times;</span>
+          <div class="modal-content">
+        
+            <div class="mySlides">
+              <div class="numbertext">1 / 5</div>
+              <img src="images/cards1.jpg" style="width:100%">
+            </div>
+        
+            <div class="mySlides">
+              <div class="numbertext">2 / 5</div>
+              <img src="images/stage.png" style="width:100%">
+            </div>
+        
+            <div class="mySlides">
+              <div class="numbertext">3 / 5</div>
+              <img src="images/cards2.jpg" style="width:100%">
+            </div>
+        
+            <div class="mySlides">
+              <div class="numbertext">4 / 5</div>
+              <img src="images/detroitCollection.png" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">5 / 5</div>
+              <img src="images/cards3.jpg" style="width:100%">
+            </div>
+        
+            <!-- Caption text -->
+            <div class="caption-container">
+              <p id="caption"></p>
+            </div>
+
+            <!-- Next/previous controls -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+            <!-- Thumbnail image controls -->
+            <div class="column">
+              <img class="demo" src="images/cards1.jpg" onclick="currentSlide(1)" width="50%">
+            </div>
+        
+            <div class="column">
+              <img class="demo" src="images/stage.png" onclick="currentSlide(2)" width="50%">
+            </div>
+        
+            <div class="column">
+              <img class="demo" src="images/cards2.jpg" onclick="currentSlide(3)" width="50%">
+            </div>
+        
+            <div class="column">
+              <img class="demo" src="images/detroitCollection.png" onclick="currentSlide(4)" width="50%"> 
+            </div>
+
+            <div class="column">
+              <img class="demo" src="images/cards3.jpg" onclick="currentSlide(5)" width="50%">
+            </div>
+          </div>
+        </div>
+        <script>
+            // Open the Modal
+            function openModal() {
+              document.getElementById('myModal').style.display = "block";
+            }
+            
+            // Close the Modal
+            function closeModal() {
+              document.getElementById('myModal').style.display = "none";
+            }
+            
+            var slideIndex = 1;
+            showSlides(slideIndex);
+            
+            // Next/previous controls
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            // Thumbnail image controls
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("demo");
+              var captionText = document.getElementById("caption");
+              if (n > slides.length) {slideIndex = 1}
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";
+              dots[slideIndex-1].className += " active";
+              captionText.innerHTML = dots[slideIndex-1].alt;
+            }
+        </script>
+  </div>
+  <div class="footer">
+    12345 W Broadway <br>
+    New York City, NY 10036 <br>
+    111-111-1111 <br>
+    logan@signatures.notasite.com
+  </div>
+</body>
+</html>

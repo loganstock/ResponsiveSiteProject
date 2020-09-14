@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Signatures Sports Memorbilia Collection Group - Events</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+<link href="query.css" rel="stylesheet" type="text/css">
+<meta name="author" content="Logan Stock">
+</head>
+
+<body>
+  <div class="header">
+    <ul class="navigation">
+        <li><a href="events.html">Events</a></li>
+        <li><a href="store.html">Store</a></li>
+        <li><a href="feature.html">Feature</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="news.html">Newsletter</a></li>
+        <li><a href="index.html">Home</a></li>
+    </ul>
+  </div>
+  <div class="body">
+    <h1>Events Calendar</h1> 
+    <iframe src="https://calendar.google.com/calendar/embed?src=park.edu_pkj3jpneooqb710dndlag67ks0%40group.calendar.google.com&ctz=America%2FChicago" style="border: 0" width="100%" height="500" frameborder="0" scrolling="no"></iframe>
+    <h2>Search</h2>
+
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for events..">
+    <ul id="myUL">
+      <li><a href="#">Monthly Meeting: January 2020</a></li>
+      <li><a href="#">Monthly Meeting: February 2020</a></li>
+      <li><a href="#">Monthly Meeting: March 2020</a></li>
+      <li><a href="#">Monthly Meeting: April 2020</a></li>
+      <li><a href="#">Monthly Meeting: May 2020</a></li>
+      <li><a href="#">Monthly Meeting: June 2020</a></li>
+      <li><a href="#">Monthly Meeting: August 2020</a></li>
+      <li><a href="#">Monthly Meeting: September 2020</a></li>
+      <li><a href="#">Monthly Meeting: October 2020</a></li>
+      <li><a href="#">Monthly Meeting: November 2020</a></li>
+      <li><a href="#">Monthly Meeting: December 2020</a></li>
+    </ul> 
+
+    <script>
+        function myFunction() {
+          // Declare variables
+          var input, filter, ul, li, a, i, txtValue;
+          input = document.getElementById('myInput');
+          filter = input.value.toUpperCase();
+          ul = document.getElementById("myUL");
+          li = ul.getElementsByTagName('li');
+        
+          // Loop through all list items, and hide those who don't match the search query
+          for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("a")[0];
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              li[i].style.display = "";
+            } else {
+              li[i].style.display = "none";
+            }
+          }
+        }
+    </script>
+  </div>
+  <div class="footer">
+    12345 W Broadway <br>
+    New York City, NY 10036 <br>
+    111-111-1111 <br>
+    logan@signatures.notasite.com
+  </div>
+</body>
+</html>
